@@ -16,9 +16,6 @@ else if (n == 0) {
 else {
   return (n * factorial (n -1));
 }
-
-
-
 };
 
 // 2. Compute the sum of an array of integers.
@@ -27,7 +24,7 @@ var sum = function(array) {
   if(array.length === 0) {
     return 0
   }
-   
+
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
