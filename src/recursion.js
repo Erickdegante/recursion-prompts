@@ -78,9 +78,7 @@ var range = function(x, y) {
  if (y - x === 1 || y - x === 0) {
    return [];
  }
-
- // recursive case
- y = y > x ? y - 1 : y + 1
+   y = y > x ? y - 1 : y + 1
  return y === x ? [] : range(x,y).concat(y);
 };
 //}; 7. Compute the exponent of a number.
@@ -90,7 +88,9 @@ var range = function(x, y) {
 // https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/computing-powers-of-a-number
 var exponent = function(base, exp) {
 
- if (exp === 0){ return 1; }
+ if (exp === 0){
+   return 1;
+ }
 
 
  return exp > 0 ? base * exponent(base, exp - 1) : 1 / (base * exponent(base, -1 * exp - 1));
@@ -113,10 +113,23 @@ var powerOfTwo = function(n) {
 
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
+  if(string === "") {
+    return "";
+  }
+  else {
+    return reverse(string.substr(1)) + string.charAt(0);
+  }
 };
+ reverse(string);
 
 // 10. Write a function that determines if a string is a palindrome.
 var palindrome = function(string) {
+  if(palindrome === ""){
+    return true;
+  }  else {
+      return flase;
+    }
+
 };
 
 // 11. Write a function that returns the remainder of x divided by y without using the
